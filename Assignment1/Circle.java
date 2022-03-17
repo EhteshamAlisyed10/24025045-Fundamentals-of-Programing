@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Week1 here.
- * testing area of circle
- * @author (E-htesham Ali Syed)
- * @version (8-3-22 )
+ * Write a description of class Circle here.
+ *
+ * @author (Ehtesham Ali Syed)
+ * @version (8-3-22)
  */
 import java.util.Scanner;
 public class Circle
@@ -13,7 +13,6 @@ public class Circle
     {
         System.out.println("Enter the radius : ");
         double radius = (new Scanner(System.in)).nextDouble();
-        double area = radius*radius*3.14;
-        System.out.println("Area of Circle is  :" + area);
+        System.out.println("Area of Circle is  : " + (radius*radius*3.14));
     }
 }
