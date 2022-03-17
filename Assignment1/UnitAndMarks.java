@@ -1,4 +1,10 @@
 
+/**
+ * Assignment 1 .
+ *
+ * @author (Ehtesham Ali Syed- 24025045)
+ * @version (15-3-22)
+ */
 import java.util.Scanner;
 import java.util.ArrayList;
 
