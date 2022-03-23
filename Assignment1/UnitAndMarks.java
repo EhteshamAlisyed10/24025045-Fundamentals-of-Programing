@@ -20,6 +20,7 @@ public class UnitAndMarks
         getInput();
         display();
         findMinMax();
+        findMean();
     }
 
     public void getInput()
@@ -65,8 +66,19 @@ public class UnitAndMarks
         }
         System.out.println("The Maximum mark is : " +max+"\nThe Minimum mark is : " +min);
     }
+    
+    public void findMean(){
+    double mean  = 0, sum=0;
+    for(int i=0;i< studentMarks.size();i++){
+        sum  += studentMarks.get(i);
+    }
+    mean=sum/studentMarks.size();
+    System.out.println("The Mean of the marks is : "+mean);
+    
+}   
+
 
     public static void main(String[] args){
-        UnitAndMarks u = new UnitAndMarks();
+        UnitAndMarks assignment = new UnitAndMarks();
     }
 }
