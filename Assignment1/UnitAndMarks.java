@@ -27,7 +27,7 @@ public class UnitAndMarks
 
     }
 
-    public void getInput() //This function is used to take the inputs from the user
+    public void getInput() //This method is used to take the inputs from the user
     {
         System.out.println("Enter the Unit Name :");
         unitName = (new Scanner(System.in)).nextLine(); //unitName is variable which is used to store the unit name
@@ -47,24 +47,26 @@ public class UnitAndMarks
                 do
                 {
                     System.out.println("Invalid Input Please enter the marks between 0 - 100\n Now Please enter the marks of student "+(i+1)+" again : ");
+                    //this function will allow user to re-enter the marks os student again
                     marks = (new Scanner(System.in)).nextDouble();
                 }
-                while(marks < 0 || marks > 100);
+                while(marks < 0 || marks > 100); //It is the condition for identifying the given input is invalid 
                 studentMarks.add(marks);
             }
         }
     }
 
-    public void display() //This function is used to display the unit name and marks of the students
+    public void display() //This method is used to display the unit name and marks of the students
     {
         System.out.println("The unit name is "+unitName+"\nThe student marks are as follows:\n");
-        for(int i=0;i< studentMarks.size();i++)
+        for(int i=0;i< studentMarks.size();i++) 
+        //In this for loop, it will continue the execution until it reaches the studentmarks length 
         {
             System.out.println("Student "+(i+1)+" marks : " + studentMarks.get(i)); 
         }
     }
 
-    public void findMinMax()//This function is used to find minimum and maximum of marks of students
+    public void findMinMax()//This method is used to find minimum and maximum of marks of students
     {
         double min = 0 ,max = 0;//Here we are declaring two variables as min and max to store and find min & max marks of the students
         min = studentMarks.get(0);
@@ -83,7 +85,7 @@ public class UnitAndMarks
         System.out.println("\nThe Maximum mark is : " +max+"\nThe Minimum mark is : " +min);
     }
 
-    public void findMeanAndSD()//This function is used to calculate mean and standard deviation
+    public void findMeanAndSD()//This method is used to calculate mean and standard deviation
     {
         double mean  = 0, sum=0,  standardDeviation = 0;//Declaring variables to find and store the values of marks of students
         for(int i=0;i< studentMarks.size();i++) 
@@ -94,6 +96,7 @@ public class UnitAndMarks
         for(int i=0;i< studentMarks.size();i++)
         {
             standardDeviation += ((studentMarks.get(i)-mean)*(studentMarks.get(i)-mean));
+            //standardDeviation= (studentmarks-mean)*studentmarks-mean
         }
         standardDeviation /= (studentMarks.size()-1); // Standard deviation = Standard deviation/ (number of students-1)
         standardDeviation = Math.sqrt(standardDeviation); // Math.sqrt is used to find square root
